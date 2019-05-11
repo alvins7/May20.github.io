@@ -24,7 +24,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('Hi|潇潇|#rectangle|#time|持之以恒|Believe in yourself|人定胜天|Learn and live|勤能补拙|Knowledge is power|永不气馁!|Never say die|相信你自己！');
+      S.UI.simulate('Hi|潇潇|你好|今天是五月二十|爱你的日子|跟昨天一样|五月是我们的开始|不会结束|一万天|是起点|一万年|是上限|我爱你');
     }
 
     S.Drawing.loop(function () {
