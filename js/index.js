@@ -24,7 +24,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('Hi|潇潇|你好|今天是五月二十|爱你的日子|跟昨天一样|五月是我们的开始|不会结束|一万天|是起点|一万年|是上限|我爱你');
+      S.UI.simulate('Hi|潇潇|你好|今天五月二十|爱你的日子|跟昨天一样|五月是我们的开始|不会结束|一万天|是起点|一万年|是上限|我爱你|点一下我');
     }
 
     S.Drawing.loop(function () {
@@ -158,6 +158,12 @@ S.UI = (function () {
     checkInputWidth();
 
     timedAction(function (index) {
+      if(index==14){
+        $(".canvas").on('click',function(){
+          
+          window.location.href = "/Home.html";
+        });
+      }
       current = sequence[index-1];
       action = getAction(current);
       value = getValue(current);
@@ -719,7 +725,7 @@ S.Shape = (function () {
     render: function () {
       for (var d = 0; d < dots.length; d++) {
         dots[d].render();
-      }
+      };
     }
   }
 }());
