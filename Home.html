@@ -13,41 +13,43 @@
     <script src="./js/jquery.min.js.下载"></script>
 </head>
 
-<body >
-    <canvas id="c" width="100%" height="100%" ></canvas>
+<body>
+    <canvas id="c" width="100%" height="100%"></canvas>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=31062378&auto=1&height=32"></iframe>
     <script>
         var w = c.width = window.innerWidth,
-        h = c.height = window.innerHeight,
-        ctx = c.getContext('2d'),
-        opts = {
-            phrases: ["I love you\n我 爱 你", "Hi 潇潇", "Every day,\nYou're beautiful", "潇潇,\n这里有烟花", "点一下\n看烟花", "潇潇", "看,\n点一下", "今天,\n我们恋爱吧", "你有个缺点 \n缺个我"],
-            balloons: 10,
-            baseVelY: -1,
-            addedVelY: -1,
-            baseVelX: -.25,
-            addedVelX: .5,
-            baseSize: 20,
-            addedSize: 10,
-            baseSizeAdder: 2,
-            addedSizeAdder: 2,
-            baseIncrementer: .01,
-            addedIncrementer: .03,
-            baseHue: -10,
-            addedHue: 30,
-            font: '15px Verdana'
-        },
+            h = c.height = window.innerHeight,
+            ctx = c.getContext('2d'),
+            opts = {
+                phrases: ["I love you\n我 爱 你", "Hi 潇潇", "Every day,\nYou're beautiful", "潇潇,\n这里有烟花", "点一下\n看烟花", "潇潇", "看,\n点一下", "今天,\n我们恋爱吧", "你有个缺点 \n缺个我"],
+                balloons: 10,
+                baseVelY: -1,
+                addedVelY: -1,
+                baseVelX: -.25,
+                addedVelX: .5,
+                baseSize: 20,
+                addedSize: 10,
+                baseSizeAdder: 2,
+                addedSizeAdder: 2,
+                baseIncrementer: .01,
+                addedIncrementer: .03,
+                baseHue: -10,
+                addedHue: 30,
+                font: '15px Verdana'
+            },
 
-        cycle = 0,
-        balloons = [];
+            cycle = 0,
+            balloons = [];
         //ctx.fillStyle = '#eee';
         ctx.font = opts.font;
-        $("#c").on('click', function(e){
+        $("#c").on('click', function(e) {
             window.location.href = "/end.html";
         });
+
         function Balloon() {
             this.reset();
         }
-        Balloon.prototype.reset = function () {
+        Balloon.prototype.reset = function() {
 
             this.size = opts.baseSize + opts.addedSize * Math.random();
             this.sizeAdder = opts.baseSizeAdder + opts.addedSizeAdder * Math.random();
@@ -68,7 +70,7 @@
             for (var i = 0; i < this.phrase.length; ++i)
                 this.lengths.push(-ctx.measureText(this.phrase[i]).width / 2);
         }
-        Balloon.prototype.step = function () {
+        Balloon.prototype.step = function() {
 
             this.tick += this.incrementer;
             this.x += this.vx;
@@ -121,7 +123,8 @@
             for (var i = 0; i < balloons.length; ++i)
                 balloons[i].step();
         }
-        anim();</script>
+        anim();
+    </script>
 </body>
 
 </html>
