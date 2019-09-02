@@ -8,24 +8,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<title>幸运大转盘</title>
-	<link href="./幸运大转盘_files/style.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="./幸运大转盘_files/jquery-1.8.3.min.js.下载"></script>
-	<script type="text/javascript" src="./幸运大转盘_files/awardRotate.js.下载"></script>
+	<link href="幸运大转盘_files/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="幸运大转盘_files/jquery-1.8.3.min.js.下载"></script>
+	<script type="text/javascript" src="幸运大转盘_files/awardRotate.js.下载"></script>
 </head>
 
 <body>
 	<div class="result" style="display: none;"></div>
 	<div class="result_box" style="display: none;">
-		<img src="./幸运大转盘_files/result.png" class="result_img">
-		<img src="./幸运大转盘_files/close.png" class="result_close">
+		<img src="/幸运大转盘_files/result.png" class="result_img">
+		<img src="幸运大转盘_files/close.png" class="result_close">
 		<div class="award" style="display: block;">
-			<span></span><img src="./幸运大转盘_files/iphone.png"><br>
+			<span></span><img src="幸运大转盘_files/iphone.png"><br>
 		</div>
 		<p class="award_txt">获得:<br>iphone</p>
 	</div>
 	<div class="rule_box" style="display: none;">
-		<img src="./幸运大转盘_files/rule.png" class="rule_img">
-		<img src="./幸运大转盘_files/close.png" class="rule_close">
+		<img src="幸运大转盘_files/rule.png" class="rule_img">
+		<img src="幸运大转盘_files/close.png" class="rule_close">
 		<p class="rule_txt">活动规则</p>
 	</div>
 	<div class="cloud1"></div>
@@ -33,18 +33,18 @@
 	<div class="cloud3"></div>
 	<div class="share_pic"></div>
 	<div class="activity_title">
-		<img src="./幸运大转盘_files/title.png" class="title">
+		<img src="幸运大转盘_files/title.png" class="title">
 		<a class="check_rule">查看规则</a>
 	</div>
-	<img src="./幸运大转盘_files/iphone2.png" id="iphone-img" style="display:none;">
-	<img src="./幸运大转盘_files/2.png" id="sorry-img" style="display:none;">
+	<img src="幸运大转盘_files/iphone2.png" id="iphone-img" style="display:none;">
+	<img src="幸运大转盘_files/2.png" id="sorry-img" style="display:none;">
 	<div class="banner" style="margin-top: -178.5px; margin-left: -178.5px; height: 457px;">
 		<div class="turnplate"
-			style="background-image: url(&quot;./images/circle.png&quot;); background-position: 50% 50%; height: 357px; background-size: 285px 285px;">
-			<img src="./幸运大转盘_files/bottom.png" class="bottom" id="bottom" style="width: 207px; margin-left: -103.5px;">
+			style="background-image: url(&quot;images/circle.png&quot;); background-position: 50% 50%; height: 357px; background-size: 285px 285px;">
+			<img src="幸运大转盘_files/bottom.png" class="bottom" id="bottom" style="width: 207px; margin-left: -103.5px;">
 			<canvas class="item" id="wheelcanvas" width="422px" height="422px"
 				style="transform: rotate(120deg);"></canvas>
-			<img class="pointer" src="./幸运大转盘_files/pointer.png" id="pointer">
+			<img class="pointer" src="幸运大转盘_files/pointer.png" id="pointer">
 			<canvas class="pointer2" width="200px" height="424px" id="pointer2"></canvas>
 
 		</div>
@@ -291,7 +291,7 @@
 			var canvas = document.getElementById("pointer2");
 			var ctx = canvas.getContext("2d");
 			var img = new Image();
-			img.src = "./images/pointer.png";
+			img.src = "images/pointer.png";
 			ctx.drawImage(img, 0, 0);
 		}
 	</script>
